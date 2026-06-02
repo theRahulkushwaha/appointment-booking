@@ -4,6 +4,8 @@
 
 **Multi-Timezone Appointment Booking System**
 
+Live link: https://appointment-booking-flame.vercel.app/
+
 A full-stack scheduling platform built with FastAPI, React, TypeScript, and pytz.
 Book appointments across timezones with concurrency-safe slot management, holiday exclusions, and a live calendar UI.
 
@@ -16,6 +18,24 @@ Book appointments across timezones with concurrency-safe slot management, holida
 </div>
 
 ---
+
+## 📸 Screenshots
+
+### 🔐 Login
+![Login](ProjectDemo/login.png)
+
+### 📝 Sign Up
+![Sign Up](ProjectDemo/sign%20up.png)
+
+### 🗓️ Calendar
+![Calendar](ProjectDemo/calendar.png)
+
+### 📋 Appointments
+![Appointments](ProjectDemo/appointment.png)
+
+### ⚙️ Settings
+![Settings](ProjectDemo/setting.png)
+
 
 ## ✨ Features
 
