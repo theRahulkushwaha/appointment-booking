@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+[data-theme="dark"] {
+  --bg-primary: #0a0a0f;
+  --bg-surface: #13131a;
+  --bg-card: #1c1c27;
+  --bg-hover: #22222f;
+  --border: rgba(255, 255, 255, 0.08);
+  --text-primary: #f0f0ff;
+  --text-secondary: #8b8ba0;
+  --accent: #6366f1;
+  --accent-glow: rgba(99, 102, 241, 0.4);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="light"] {
+  --bg-primary: #f5f5fa;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-hover: #f0f0f8;
+  --border: rgba(0, 0, 0, 0.08);
+  --text-primary: #0a0a1a;
+  --text-secondary: #6b6b80;
+  --accent: #4f46e5;
+  --accent-glow: rgba(79, 70, 229, 0.25);
+  --success: #059669;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-primary);
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    var(--border) 1px,
+    transparent 0
+  );
+  background-size: 24px 24px;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@layer components {
+  .card-surface {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+    border-radius: 0.75rem;
+  }
+
+  .btn-cta {
+    background: var(--accent);
+    color: white;
+    transition: all 0.2s ease;
+  }
+
+  .btn-cta:hover:not(:disabled) {
+    box-shadow: 0 0 20px var(--accent-glow);
+  }
+
+  .nav-tab-active {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 0 12px var(--accent-glow);
+  }
+
+  .input-field {
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+  }
+
+  .input-field:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent-glow);
+  }
+
+  .slot-available:hover {
+    box-shadow: 0 0 12px var(--accent-glow);
+  }
+
+  .glass-card {
+    background: color-mix(in srgb, var(--bg-card) 75%, transparent);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card), 0 0 60px var(--accent-glow);
+  }
+}
